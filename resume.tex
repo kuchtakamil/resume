@@ -1,0 +1,192 @@
+\documentclass[11pt,a4paper]{article}
+
+% Encoding and fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+
+% Custom fonts
+\usepackage[defaultfam,tabular,lining]{montserrat}  % For headings
+\usepackage{inter}                                   % Main body font
+\usepackage{lato}                                    % Contact info
+\usepackage[default]{raleway}                        % Section headers - lighter font
+
+% Font family commands
+\newcommand{\montserratfont}{\fontfamily{Montserrat-TLF}\selectfont}
+\newcommand{\interfont}{\fontfamily{Inter-LF}\selectfont}
+\newcommand{\latofont}{\fontfamily{lato-TLF}\selectfont}
+\newcommand{\firafont}{\fontfamily{Raleway-TLF}\selectfont}
+
+% Set Inter as default sans-serif and document font
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\sfdefault}{Inter-LF}
+
+% Page layout
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.8cm, right=1.8cm]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+% Colors
+\usepackage{xcolor}
+\definecolor{sectionbg}{RGB}{240,240,240}
+\definecolor{sectiontext}{RGB}{80,80,80}
+\definecolor{darkgray}{RGB}{60,60,60}
+\definecolor{lightgray}{RGB}{120,120,120}
+\definecolor{linkblue}{RGB}{0,0,0}
+
+% Graphics and icons
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+
+% Tables and layout
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+% Links
+\usepackage[hidelinks]{hyperref}
+
+% Custom section style with gray background
+\usepackage{titlesec}
+\newcommand{\sectionbox}[1]{%
+  \colorbox{sectionbg}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\strut\firafont\Large\MakeUppercase{#1}\strut}}%
+}
+\titleformat{\section}
+  {\firafont\large\bfseries\color{sectiontext}}
+  {}
+  {0pt}
+  {\sectionbox}
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+
+% Custom commands for work experience
+\newcommand{\workentry}[5]{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}>{\raggedleft\arraybackslash}p{3.6cm}X@{}}
+    #1 & \textbf{#2} \\
+    Project: & #3 \\
+    Tech stack: & #4 \\
+  \end{tabularx}
+  \vspace{6pt}
+}
+
+\newcommand{\educationentry}[3]{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}>{\raggedleft\arraybackslash}p{3.6cm}X@{}}
+    #1 & \textbf{#2} \\
+    & #3 \\
+  \end{tabularx}
+  \vspace{6pt}
+}
+
+% Bullet list styling
+\setlist[itemize]{leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=4pt}
+\renewcommand{\labelitemi}{\textbullet}
+
+% No page numbers
+\pagestyle{empty}
+
+% Private contact data (not tracked in git)
+\input{private}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Header
+\noindent
+\begin{minipage}[t]{0.58\textwidth}
+  {\montserratfont\fontsize{28}{34}\selectfont\bfseries KAMIL KUCHTA}\\[6pt]
+  {\latofont\fontsize{16}{20}\selectfont\color{lightgray} Senior Software Engineer}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+  \latofont\raggedright
+  \small
+  \faPhone\ \ \phonenumber\\[3pt]
+  \faEnvelope\ \ \href{mailto:work@kamilkuchta.pl}{work@kamilkuchta.pl}\\[3pt]
+  \faMapMarker*\ \ Kraków\\[3pt]
+  \faLinkedin\ \ \href{https://www.linkedin.com/in/kamil-kuchta-dev/}{linkedin.com/in/kamil-kuchta-dev/}\\[3pt]
+  \faGlobe\ \ \href{https://kamilkuchta.pl}{https://kamilkuchta.pl}
+\end{minipage}
+
+\vspace{12pt}
+
+%-------------------------------------------------------------------------------
+\section{About Me}
+
+I am a Software Engineer with 12 years of experience in software engineering across different types of systems and projects. My work has involved feature development, defect resolution, code reviews, requirement analysis, and architectural discussions. I am passionate about Artificial Intelligence, especially Large Language Models, and continuously expand my expertise in this field. I am currently looking for opportunities in a company that will allow me to apply my skills while growing professionally in the AI domain.
+
+%-------------------------------------------------------------------------------
+\section{Key Competences}
+
+\begin{itemize}
+  \item \textbf{Professional Skills}: problem solving, analytical thinking, knowledge sharing
+  \item \textbf{Programming Languages}: Java, Python, Erlang, JavaScript
+  \item \textbf{Frameworks \& Libs}: Spring Boot, JUnit, Mockito
+  \item \textbf{Database}: PostgreSQL
+  \item \textbf{Software Architectures}: Monolith, Microservices, REST API
+  \item \textbf{Cloud Platforms}: AWS, Azure DevOps
+  \item \textbf{Containerization \& Orchestration}: Docker, Kubernetes
+  \item \textbf{Applied AI (Foundational)}: LLM Integration, RAG Architecture, Prompt Engineering
+  \item \textbf{Operating Systems}: Linux, iOS, Windows
+  \item \textbf{Development Tools}: IntelliJ, VS Code, Postman, Git, Jenkins, Maven, DBeaver
+  \item \textbf{AI-Powered Development Tools}: Github Copilot, Cursor, Claude Code, Gemini CLI
+  \item \textbf{Collaboration Tools}: Jira, Confluence
+  \item \textbf{Methodologies}: Agile, Scrum
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{Work Experience}
+
+\workentry{09.2024 -- 10.2025}{Senior Software Engineer, Jacobs}{PA Consulting -- Client: UK Home Office -- worked on a mission-critical visa processing system.}{Java, SQL, Jenkins, Microservices, Kibana, Kubernetes, Python}{}
+
+\workentry{03.2023 -- 08.2024}{Senior Software Engineer, Motorola Solutions}{Dimetra Connect.}{Java, Bash, Gradle, TLS, Public Key Infrastructure, Python}{}
+
+\workentry{01.2021 -- 02.2023}{Senior Software Engineer, Motorola Solutions}{A component for making calls between the Dimetra and LTE audio systems.}{Erlang, Elixir, Jenkins, Common Test Framework}{}
+
+\workentry{02.2017 -- 12.2020}{Senior Software Engineer, Motorola Solutions}{A web application for scanning and monitoring the Astro and Dimetra systems.}{Java 8, Spring, Angular \& TypeScript, Kotlin, Jenkins, PostgreSQL}{}
+
+\workentry{04.2014 -- 01.2017}{Software Engineer, Motorola Solutions}{A fault manager for the Astro and PSLTE systems.}{Java 6 -- 7, Swing}{}
+
+\workentry{09.2012 -- 06.2014}{Java Developer, AGH University of Science and Technology}{A fault manager for the Astro and PSLTE systems.}{Java}{}
+
+%-------------------------------------------------------------------------------
+\section{Education}
+
+\educationentry{2005 -- 2011}{AGH University of Science and Technology}{Master's degree of Computer Science, EAiE department, part-time course of study.}
+
+%-------------------------------------------------------------------------------
+\section{Languages}
+
+\begin{itemize}
+  \item Polish -- native
+  \item English -- B2
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{Trainings}
+
+\begin{itemize}
+  \item Self-directed learning in Artificial Intelligence and Large Language Models (LLMs) -- ongoing study and practice to expand expertise in modern AI technologies.
+  \item Scala Bootcamp by Evolution Gaming
+\end{itemize}
+
+%-------------------------------------------------------------------------------
+\section{Projects}
+
+\begin{itemize}
+  \item \textbf{AI-Powered Professional Profile Agent} -- Digital Twin -- \href{https://twin.kamilkuchta.pl}{twin.kamilkuchta.pl}\\
+        Tech: Python, FastAPI, AWS (Lambda, S3, Bedrock)
+  \item \textbf{YouTube Transcript to Infographic Generator}\\
+        Tech: Python, Gemini API, Prompt Engineering
+  \item \textbf{Financial Support Agent} -- under construction\\
+        Tech: Python, AWS (SageMaker, Lambda, S3 Vectors)
+\end{itemize}
+
+\vfill
+
+{\small\itshape\color{lightgray}
+I hereby consent to my personal data being processed for the purpose of considering my application for the vacancy advertised.
+}
+
+\end{document}

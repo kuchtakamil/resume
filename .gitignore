@@ -1,0 +1,36 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+
+# Build output
+*.pdf
+*.dvi
+*.ps
+
+# Bibtex
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Private data
+private.tex
