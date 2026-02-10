@@ -32,5 +32,11 @@
 .DS_Store
 Thumbs.db
 
+# Offers - generated artifacts
+offers/**/*.pdf
+offers/**/*.aux
+offers/**/*.log
+offers/**/*.out
+
 # Private data
 private.tex

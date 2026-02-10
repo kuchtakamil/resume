@@ -26,6 +26,11 @@
 \usepackage{parskip}
 \setlength{\parindent}{0pt}
 
+% Reduce hyphenation
+\hyphenpenalty=2000
+\tolerance=1000
+\emergencystretch=1em
+
 % Colors
 \usepackage{xcolor}
 \definecolor{sectionbg}{RGB}{240,240,240}
@@ -114,7 +119,9 @@
 %-------------------------------------------------------------------------------
 \section{About Me}
 
-I am a Software Engineer with 12 years of experience in software engineering across different types of systems and projects. My work has involved feature development, defect resolution, code reviews, requirement analysis, and architectural discussions. I am passionate about Artificial Intelligence, especially Large Language Models, and continuously expand my expertise in this field. I am currently looking for opportunities in a company that will allow me to apply my skills while growing professionally in the AI domain.
+{\leftskip=0.4em\rightskip=0.4em\relax
+\hspace{2.0em}I am a Software Engineer with 12 years of experience in software engineering across different types of systems and projects. My work has involved feature development, defect resolution, code reviews, requirement analysis, and architectural discussions. I am passionate about Artificial Intelligence, especially Large Language Models, and continuously expand my expertise in this field. I am currently looking for opportunities in a company that will allow me to apply my skills while growing professionally in the AI domain.
+\par}
 
 %-------------------------------------------------------------------------------
 \section{Key Competences}
@@ -130,7 +137,7 @@ I am a Software Engineer with 12 years of experience in software engineering acr
   \item \textbf{Applied AI (Foundational)}: LLM Integration, RAG Architecture, Prompt Engineering
   \item \textbf{Operating Systems}: Linux, iOS, Windows
   \item \textbf{Development Tools}: IntelliJ, VS Code, Postman, Git, Jenkins, Maven, DBeaver
-  \item \textbf{AI-Powered Development Tools}: Github Copilot, Cursor, Claude Code, Gemini CLI
+  \item \textbf{AI-Powered Development Tools}: Claude Code, Github Copilot, Cursor, Gemini CLI
   \item \textbf{Collaboration Tools}: Jira, Confluence
   \item \textbf{Methodologies}: Agile, Scrum
 \end{itemize}
@@ -175,12 +182,12 @@ I am a Software Engineer with 12 years of experience in software engineering acr
 \section{Projects}
 
 \begin{itemize}
-  \item \textbf{AI-Powered Professional Profile Agent} -- Digital Twin -- \href{https://twin.kamilkuchta.pl}{twin.kamilkuchta.pl}\\
-        Tech: Python, FastAPI, AWS (Lambda, S3, Bedrock)
+  \item \textbf{AI-Powered Professional Profile Agent} -- \textbf{Digital Twin} -- \href{https://twin.kamilkuchta.pl}{twin.kamilkuchta.pl}\\
+        Tech: Python, FastAPI, AWS (Bedrock, Lambda, S3)
   \item \textbf{YouTube Transcript to Infographic Generator}\\
         Tech: Python, Gemini API, Prompt Engineering
   \item \textbf{Financial Support Agent} -- under construction\\
-        Tech: Python, AWS (SageMaker, Lambda, S3 Vectors)
+        Tech: Python, FastAPI, AWS (SageMaker, Bedrock, Lambda, S3 Vectors)
 \end{itemize}
 
 \vfill
